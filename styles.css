@@ -1,0 +1,274 @@
+:root {
+    --mercury: #DEF4FC;
+    --venus: #F7CC7F;
+    --earth: #545BFE;
+    --mars: #FF6A45;
+    --jupiter: #ECAD7A;
+    --saturn: #FCCB6B;
+    --uranus: #65F0D5;
+    --neptune: #497EFA;
+    --theme: var(--earth);
+}
+
+/* GLOBALS & CONTAINERS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 14px;
+    background-color: rgb(10, 0, 40);
+    color: white;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+}
+.globalContainer{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+.flexcontainer {
+    display: flex;
+    padding: 0px;
+}
+
+/* TEXT */
+h5{
+
+}
+h4 {
+
+}
+h3 {
+
+}
+h2 {
+    font-size: 2.5rem;
+}
+h1 {
+    text-transform: uppercase;
+}
+p {
+
+}
+ /* FLEXBOXES */
+ .nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.621);
+    position: sticky;
+    margin: 0;
+    z-index: 99;
+ }
+ .buttons {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.621);
+    width: 100%;
+ }
+.planet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.title {
+    justify-content: center;
+    margin: 1rem;
+}
+.paragraph {
+    justify-content: center;
+    text-align: center;
+    margin: 1rem;
+    opacity: 0.9;
+}
+.infoboxes {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+.infoboxFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 1px rgba(142, 142, 142, 0.659);
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+/* ELEMENTS */
+ button {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+ }
+
+/* CLASSES */
+.hamburger {
+    display: block;
+    width: 3rem;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+.hamburger .bar, .hamburger:after, .hamburger:before{
+    content: '';
+    display: block;
+    position: relative;
+    width: 80%;
+    height: 0.35rem;
+    background-color: white;
+    margin: 6px 0px;
+    transition: 0.4s;
+}
+.hamburger.is-active:before{
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+.hamburger.is-active:after{
+    transform: rotate(45deg) translate(-9px, -6px);
+}
+.hamburger.is-active .bar {
+    opacity: 0;
+}
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    min-height: 110vh;
+    display: block;
+    z-index: 98;
+    background-color: rgb(0, 4, 27);
+    padding-top: 10rem;
+    transition: 0.4s;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-weight: bolder;
+}
+.mobile-nav.is-active {
+    right: 0;
+}
+.mobile-nav a {
+    display: block;
+    margin: 0 auto 1rem;
+    text-align: center;
+    width: 100%;
+    max-width: 90vw;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    border-bottom: 0.05rem solid rgba(255, 255, 255, 0.238);
+    color: white;
+    text-decoration: none;
+}
+/* .mobileNavPlanets:after {
+    content: '';
+    background-color: purple;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 10rem;
+} */
+.mobileNavPlanetsFlexContainer {
+    display: flex;
+}
+.mobileNavPlanetsColourSample {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 180px;
+    background-color: var(--theme);
+    display: inline-block;
+}
+#neptune {
+    border-bottom: none;
+}
+.mobile-nav a:hover {
+    background-color: var(--theme);
+}
+.button {
+    letter-spacing: 1.9px;
+    padding: 2rem;
+}
+.planetImg {
+    width: 50%;
+    margin: 5rem 2rem 5rem 2rem;
+    z-index: 55;
+}
+.geologyImg {
+    z-index: 60;
+}
+.dataQuery {
+    color: rgba(142, 142, 142, 0.659);
+}
+.dataResponse {
+    font-size: 1.5rem;
+}
+
+/* Premade Classes to be assigned via DOM */
+
+.currentActiveButtonClass {
+    box-shadow: 0px -0.4rem var(--theme) inset;
+    position: relative;
+}
+.button:focus {
+    box-shadow: 0px -0.4rem var(--theme) inset;
+    position: relative;
+}
+.makeAbsolute {
+    position: absolute;
+    justify-self: center;
+    height: 15.5vh;
+    top: 23rem;
+}
+
+/* Media queries */
+@media (min-width: 1000px) {
+    .makeAbsolute {
+        position: absolute;
+        justify-self: center;
+        height: 39.5vh;
+        top: 48rem;
+    }
+    .mobile-nav {
+        display: none;
+    }
+    .hamburger {
+        display: none;
+    }
+    .desktop-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .desktopNavPlanets {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.514);
+        margin: 0px 1rem 0px 1rem;
+    }
+    .desktopNavPlanets:hover {
+        color: white;
+        box-shadow: 0rem -2rem var(--theme);
+        position: relative;
+    } 
+}
+
+@media (max-width: 1000px) {
+    .desktop-nav {
+        display: none !important;
+    }
+    .desktopNavList {
+        display: none;
+    }
+    .desktopNavPlanets {
+        display: none;
+    }
+}

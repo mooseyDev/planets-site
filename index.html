@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/planet-earth.svg">
+  <link href="styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="starry-night.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <title>Moosey's Planets Site</title>
+
+</head>
+<body>
+  <div class="globalContainer">
+    <div class="flexcontainer nav">
+      <h2 class="navTitle">THE PLANETS</h2>
+      <div class="desktop-nav">
+        <nav class="desktopNavList">
+          <a href="#!" onclick="changePlanet('Mercury')" class="desktopNavPlanets" id="Mercury">MERCURY</a>
+          <a href="#!" class="desktopNavPlanets" onclick="changePlanet('Venus')" id="Venus">VENUS</a>
+          <a href="#!" class="desktopNavPlanets" onclick="changePlanet('Earth')" id="Earth">EARTH</a>
+          <a href="#!" class="desktopNavPlanets" onclick="changePlanet('Mars')" id="Mars">MARS</a>
+          <a href="#!" class="desktopNavPlanets" onclick="changePlanet('Jupiter')" id="Jupiter">JUPITER</a>
+          <a href="#!" class="desktopNavPlanets" onclick="changePlanet('Saturn')" id="Saturn">SATURN</a>
+          <a href="#!" class="desktopNavPlanets" onclick="changePlanet('Uranus')" id="Uranus">URANUS</a>
+          <a href="#!" class="desktopNavPlanets" onclick="changePlanet('Neptune')" id="Neptune">NEPTUNE</a>
+        </nav>
+      </div>
+      <button class="hamburger">
+        <div class="bar"></div>
+      </button>
+    </div>
+    <div class="flexcontainer mob-nav">
+      <nav class="mobile-nav">
+        <a href="#!" onclick="changePlanet('Mercury')" class="mobileNavPlanets" id="Mercury">Mercury</a>
+        <a href="#!" class="mobileNavPlanets" onclick="changePlanet('Venus')" id="Venus">Venus</a>
+        <a href="#!" class="mobileNavPlanets" onclick="changePlanet('Earth')" id="Earth">Earth</a>
+        <a href="#!" class="mobileNavPlanets" onclick="changePlanet('Mars')" id="Mars">Mars</a>
+        <a href="#!" class="mobileNavPlanets" onclick="changePlanet('Jupiter')" id="Jupiter">Jupiter</a>
+        <a href="#!" class="mobileNavPlanets" onclick="changePlanet('Saturn')" id="Saturn">Saturn</a>
+        <a href="#!" class="mobileNavPlanets" onclick="changePlanet('Uranus')" id="Uranus">Uranus</a>
+        <a href="#!" class="mobileNavPlanets" onclick="changePlanet('Neptune')" id="Neptune">Neptune</a>
+      </nav>
+    </div>
+    <div class="flexcontainer buttons">
+      <button class="button overviewButton currentActiveButtonClass" onclick="overviewButtonClick()">OVERVIEW</button>
+      <button class="button structureButton" onclick="structureButtonClick()">STRUCTURE</button>
+      <button class="button surfaceButton" onclick="surfaceButtonClick()">SURFACE</button>
+    </div>
+    <div class="flexcontainer planet">
+      <img src="./assets/planet-earth.svg" class="planetImg"></img>
+    </div>
+    <div class="flexcontainer title">
+      <h1 id="planetName">Earth</h1>
+    </div>
+    <div class="flexcontainer paragraph">
+      <p class="planetInfoParagraph">Third planet from the Sun and the only known planet to harbor life. About 29.2% of Earth's surface is land with remaining 70.8% is covered with water. Earth's distance from the Sun, physical properties and geological history have allowed life to evolve and thrive.</p>
+    </div>
+    <div class="flexcontainer infoboxes">
+      <div class="infoboxFlex">
+        <p class="dataQuery">ROTATION TIME</p>
+        <p id="rotation" class="dataResponse">0.99 days</p>
+      </div>
+      <div class="infoboxFlex">
+        <p class="dataQuery">REVOLUTION TIME</p>
+        <p id="revolution" class="dataResponse">365.2 days</p>
+      </div>
+      <div class="infoboxFlex">
+        <p class="dataQuery">RADIUS</p>
+        <p id="radius" class="dataResponse">6,371 km</p>
+      </div>
+      <div class="infoboxFlex">
+        <p class="dataQuery">AVERAGE TEMPERATURE</p>
+        <p id="temperature" class="dataResponse">16 °C</p>
+      </div>
+    </div>
+  </div>
+<script src="index.js">
+</script>
+</body>
+</html>
