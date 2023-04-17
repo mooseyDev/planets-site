@@ -131,25 +131,6 @@ function changePlanet(planetChoice) {
   document.querySelector('#radius').innerHTML = currentPlanet.radius;
   document.querySelector('#temperature').innerHTML = currentPlanet.temperature;
 
-  //changing sizes
-  const planetSizeRatios = {
-    mercury: 0.38,
-    venus: 0.95,
-    earth: 1,
-    mars: 0.53,
-    jupiter: 11.21,
-    saturn: 9.45,
-    uranus: 4.01,
-    neptune: 3.88
-  };
-   
-  const sizeRatio = planetSizeRatios[currentPlanet];
-  const baseSize = 150; // You can adjust this value based on the desired base size for Earth
-  const newSize = baseSize * sizeRatio;
-
-  document.querySelector('.planetImg').style.width = `${newSize}px`;
-  document.querySelector('.planetImg').style.height = `${newSize}px`;
-}
 
 // starry night background
 function createStars(numberOfStars) {
